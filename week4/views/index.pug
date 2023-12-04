@@ -5,11 +5,15 @@ block content
     div(class="nav-wrapper")
       a(href="#" class="brand-logo") Recipes
       ul(id="nav-mobile" class="right hide-on-med-and-down")
+      br
+      input(type='search' id='search' onkeydown="search(this, event)" placeholder="Search recipe")
   div(class='container')
     div(class='col')
       h1(id='recipeName')
       p(id='ingredients')
       p(id='instructions')
+      div(id='images')
+        img(id='foodImage')
     div(class='col')
       input(type='text' id='name-text')
       h4 Ingredients 
@@ -18,6 +22,8 @@ block content
       h4 instructions
       textarea(id='instructions-text')
       button(id='add-instruction' type='button' class='btn' onclick='addInstruction()') Add instruction 
+      div(id="categories")
       input(id='image-input' type='file')
+      div(id='categories')
       button(id='submit' type='submit' class='btn' onclick='submitRecipe()') Submit
     
