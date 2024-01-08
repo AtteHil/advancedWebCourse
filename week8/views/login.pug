@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  label(for="email-input") Email 
+  input(type="email" id="email-input")
+  br
+  label(for="password-input") Password 
+  input(type="password" id="password-input")
+  br
+  input(type="submit" onclick="sendLogin()")
+  script(src="javascripts/login.js")
